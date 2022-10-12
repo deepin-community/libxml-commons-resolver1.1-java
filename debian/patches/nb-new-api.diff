@@ -1,0 +1,47 @@
+Index: libxml-commons-resolver1.1-java-1.2/resolver.xml
+===================================================================
+--- libxml-commons-resolver1.1-java-1.2.orig/resolver.xml	2006-11-20 21:23:07.000000000 +0100
++++ libxml-commons-resolver1.1-java-1.2/resolver.xml	2008-09-23 21:24:47.000000000 +0200
+@@ -88,7 +88,7 @@
+ 
+    <echo message="Compiling..." />
+ 
+-   <javac srcdir="${src.dir}" destdir="${build.classes.dir}" debug="true" optimize="true" deprecation="true" verbose="false">
++   <javac srcdir="${src.dir}" destdir="${build.classes.dir}" debug="true" optimize="true" deprecation="true" verbose="false" source="1.4">
+      <!-- <classpath> not needed since Ant already supplies these Sep-03 -sc -->
+      <include name="${resolver.subdir}/*.java"/>
+      <include name="${resolver.subdir}/helpers/*.java"/>
+Index: libxml-commons-resolver1.1-java-1.2/src/org/apache/xml/resolver/Catalog.java
+===================================================================
+--- libxml-commons-resolver1.1-java-1.2.orig/src/org/apache/xml/resolver/Catalog.java	2006-11-20 21:23:06.000000000 +0100
++++ libxml-commons-resolver1.1-java-1.2/src/org/apache/xml/resolver/Catalog.java	2008-09-23 21:26:38.000000000 +0200
+@@ -29,6 +29,7 @@
+ import java.util.Enumeration;
+ import java.util.Hashtable;
+ import java.util.Vector;
++import java.util.Iterator;
+ 
+ import java.net.URL;
+ import java.net.MalformedURLException;
+@@ -1166,6 +1167,21 @@
+     }
+   }
+ 
++  /**
++   * Return all registered public IDs.
++   */
++  public Iterator getPublicIDs() {
++    Vector v = new Vector();
++    Enumeration enum = catalogEntries.elements();
++    
++    while (enum.hasMoreElements()) {
++	CatalogEntry e = (CatalogEntry) enum.nextElement();
++	if (e.getEntryType() == PUBLIC) {
++	    v.add(e.getEntryArg(0));
++	}
++    }
++    return v.iterator();
++  }
+ 
+   /**
+    * Return the applicable DOCTYPE system identifier.

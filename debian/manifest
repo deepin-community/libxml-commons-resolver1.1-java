@@ -1,0 +1,7 @@
+usr/share/java/xml-resolver.jar:
+ Bundle-ManifestVersion: 2
+ Bundle-Name: Apache XML Resolver
+ Bundle-SymbolicName: org.apache.xml.resolver
+ Bundle-Vendor: Apache Software Foundation
+ Bundle-Version: 1.2.0
+ Export-Package: org.apache.xml.resolver,org.apache.xml.resolver.apps,org.apache.xml.resolver.helpers,org.apache.xml.resolver.readers,org.apache.xml.resolver.tools

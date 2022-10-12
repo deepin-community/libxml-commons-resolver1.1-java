@@ -1,0 +1,174 @@
+libxml-commons-resolver1.1-java (1.2-11) unstable; urgency=medium
+
+  * Team upload.
+  * Use debhelper-compat.
+    - Update to compat level 13.
+  * Use javahelper to create manifest.
+  * Remove space from d/changelog.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Thu, 24 Sep 2020 13:47:35 +0100
+
+libxml-commons-resolver1.1-java (1.2-10) unstable; urgency=medium
+
+  * Team upload.
+  * Removed the build dependency on libjaxp1.3-java
+  * Standards-Version updated to 4.5.0
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 05 Apr 2020 18:16:49 +0200
+
+libxml-commons-resolver1.1-java (1.2-9) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure with Java 9 (Closes: #874661)
+  * Fixed the watch file
+  * Standards-Version updated to 4.1.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 17 Nov 2017 15:21:31 +0100
+
+libxml-commons-resolver1.1-java (1.2-8) unstable; urgency=medium
+
+  * Team upload.
+  * Removed the GCJ package
+  * Build with the DH sequencer instead of CDBS
+  * Moved the package to Git
+  * Removed Michael Koch from the uploaders (Closes: #654104)
+  * Standards-Version updated to 3.9.8
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Jun 2017 10:21:11 +0200
+
+libxml-commons-resolver1.1-java (1.2-7) unstable; urgency=low
+
+  * Add OSGi metadata to jar manifest
+  * Add javahelper to Build-Depends
+  * Replaced obsolete build-depend default-jdk-builddep by default-jdk
+    and gcj-native-helper to fix lintian reported error.
+  * Bumped Standards-Version to 3.9.2
+  * Add Jakub Adam to Uploaders
+
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Thu, 24 Nov 2011 20:48:37 +0100
+
+libxml-commons-resolver1.1-java (1.2-6) unstable; urgency=low
+
+  [ Giovanni Mascellani ]
+  * Adding and installing .pom file. (Closes: #613108)
+
+  [ Torsten Werner ]
+  * Remove Stefan and Arnaud from Uploaders field.
+  * Remove java*-runtime from Depends field. (Closes: #583955)
+  * Switch to source format 3.0.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 03 Aug 2011 14:07:26 +0200
+
+libxml-commons-resolver1.1-java (1.2-5) unstable; urgency=low
+
+  * Add patch catalog.diff to fix catalog lookup thanks to Brian M. Carlson.
+    (Closes: #552018)
+  * Switch to debhelper version 5.
+  * Add missing Depends: ${misc:Depends}.
+  * Change Section: java.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 27 Jan 2010 20:31:29 +0100
+
+libxml-commons-resolver1.1-java (1.2-4) unstable; urgency=low
+
+  * Remove debug statements from patch nb-extra.diff - thanks to Marek Slama.
+
+ -- Torsten Werner <twerner@debian.org>  Fri, 30 Jan 2009 23:03:37 +0100
+
+libxml-commons-resolver1.1-java (1.2-3) unstable; urgency=low
+
+  * Add another patch for netbeans from Yulia Novozhilova.
+    (Closes: 508200)
+  * Add myself to Uploaders.
+  * Bump up Standards-Version: 3.8.0.
+  * Fix the license (Apache-2.0) in debian/copyright. (Closes: #508211)
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 09 Dec 2008 18:54:52 +0100
+
+libxml-commons-resolver1.1-java (1.2-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add patch for netbeans from Yulia Novozhilova. (Closes: #495104)
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 23 Sep 2008 21:19:52 +0200
+
+libxml-commons-resolver1.1-java (1.2-2) unstable; urgency=low
+
+  * Build-Depends on default-jdk-builddep. Closes: #477897.
+
+ -- Michael Koch <konqueror@gmx.de>  Wed, 30 Apr 2008 04:45:03 -0100
+
+libxml-commons-resolver1.1-java (1.2-1) unstable; urgency=low
+
+  * New upstream release. Closes: #453777
+  * Add libxml-commons-resolver1.1-java-gcj package for GCJ.
+    Closes: #458248
+  * Cleaned up debian/rules.
+  * Added watch file.
+  * Updated Standards-Version to 3.7.3.
+  * Added Homepage, Vcs-Svn and Vcs-Browser fields.
+
+ -- Michael Koch <konqueror@gmx.de>  Sat, 05 Jan 2008 22:57:45 +0100
+
+libxml-commons-resolver1.1-java (1.1-8) unstable; urgency=low
+
+  * Removed unneeded Build-Depends on libxerces-java.
+  * Use Homepage tag in package descriptions.
+  * Removed Wolfgang and added myself to Uploaders.
+
+ -- Michael Koch <konqueror@gmx.de>  Wed, 20 Jun 2007 19:02:38 -0100
+
+libxml-commons-resolver1.1-java (1.1-7) unstable; urgency=low
+
+  * updated Standards-Version to 3.7.2, split build-dep and
+    build-dep-indep
+  * build with java-gcj-compat-dev (closes: #377068)
+  * updated to jaxp1.3
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Mon, 31 Jul 2006 16:30:17 +0200
+
+libxml-commons-resolver1.1-java (1.1-6) unstable; urgency=low
+
+  * Removed explicit usage of jikes build compiler property
+    for kaffe jikes -> ecj transition
+  * Removed jikes from build-dependencies
+  * Changed Build-Depends to Build-Depends-Indep to fix lintian warning
+  * Added myself to uploaders
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Fri,  6 Jan 2006 19:19:10 +0100
+
+libxml-commons-resolver1.1-java (1.1-5) unstable; urgency=low
+
+  * build with kaffe, no more with sablevm
+  * policy 3.6.2, no change needed
+  * ant transition (closes: #326437)
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Fri, 23 Sep 2005 17:47:14 +0200
+
+libxml-commons-resolver1.1-java (1.1-4) unstable; urgency=low
+
+  * added CatalogManager.properties to /etc/xml/resolver (closes: #268786)
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Mon, 11 Oct 2004 01:41:20 +0200
+
+libxml-commons-resolver1.1-java (1.1-3) unstable; urgency=low
+
+  * added libjaxp1.2-java to the build-dep and to the CLASSPATH because
+    sablevm is not yet jaxp compliant (closes: #253786)
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Wed, 14 Jul 2004 14:25:49 +0200
+
+libxml-commons-resolver1.1-java (1.1-2) unstable; urgency=low
+
+  * Use SableVM for building the package
+
+ -- Stefan Gybas <sgybas@debian.org>  Sun,  6 Jun 2004 22:59:46 +0200
+
+libxml-commons-resolver1.1-java (1.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Stefan Gybas <sgybas@debian.org>  Wed, 18 Feb 2004 11:14:35 +0100
